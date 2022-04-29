@@ -397,16 +397,23 @@ var score = function(){
   scoreDiv.appendChild(submit);
   submit.textContent = "Submit";
   submit.className = "button";
-  submit.addEventListener ("click", function(event){
-    event.preventDefault();
+  submit.addEventListener ("click", function(players){
+    const scores = JSON.parse(localStorage.getItem('players')) || [];
+    const new_score = { initials: Inp.value.trim(),//get initials,
+                        playerscore: finalscore,//get score
+                      }
+    scores.push(new_score);
+    
+    localStorage.setItem('players', JSON.stringify(scores));
     players = {
       initials: Inp.value.trim(),
-      playerscore: finalscore,
+     playerscore: finalscore,
     };
     localStorage.setItem("players", JSON.stringify(players));
   });
   submit.addEventListener ("click", viewScores);
 }
+
 // View scores
 var viewScores = function() {
 scoreDiv.remove();
