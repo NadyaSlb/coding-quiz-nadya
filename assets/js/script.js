@@ -10,10 +10,11 @@ var questionDiv2 = document.createElement("div");
 var questionDiv3 = document.createElement("div");
 var questionDiv4 = document.createElement("div");
 var scoreDiv = document.createElement("div");
+var lastDiv = document.createElement("div");
 
 var result = document.createElement("div");
 body.appendChild(result);
-var players =[];
+var players = {};
 
 //Set timer
 var countdown = function() {
@@ -404,6 +405,29 @@ var score = function(){
     };
     localStorage.setItem("players", JSON.stringify(players));
   });
+  submit.addEventListener ("click", viewScores);
 }
+// View scores
+var viewScores = function() {
+scoreDiv.remove();
+result.remove();
+formQuestion.appendChild(lastDiv);
+lastDiv.className = "container";
+var highScores = document.createElement("ol");
+highScores.textContent = "High scores";
+var loadScores = function(){
+  var In = document.createElement("li");
+  highScores.appendChild(In);
+}
+  lastDiv.appendChild(highScores);
+  
+  var savedScores = localStorage.getItem("players");
+  savedScores = JSON.parse(savedScores);
+  for (var i = 0; i < savedScores.length; i++) {
+    loadScores(savedScores[i]);
+  }
+ 
+}
+
 
 buttonStart.addEventListener("click", firstQuestion);
