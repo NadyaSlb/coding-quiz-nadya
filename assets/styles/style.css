@@ -14,8 +14,38 @@ margin: 40px;
 padding: 0 400px;
 }
 
+.startbutton{
+    background-color: #330066;
+    color: white;
+    padding: 5px;
+}
+
+.buttonZero {
+    border: none;
+}
+
+
 .button {
     background-color: #330066;
     color: white;
     padding: 5px;
+    display: block;
+    margin-left: 80px;
+    margin-top: 5px;
+}
+
+.forResult {
+    font-weight: bold;
+    font-size: 40px;
+    color: red;
+    text-align: center;
+    border-top: red solid;
+}
+
+.forResult1 {
+    font-weight: bold;
+    font-size: 40px;
+    color: green;
+    text-align: center;
+    border-top: green solid;
 }
