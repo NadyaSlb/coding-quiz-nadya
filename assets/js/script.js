@@ -14,7 +14,7 @@ var lastDiv = document.createElement("div");
 
 var result = document.createElement("div");
 body.appendChild(result);
-var players = {};
+var players = [];
 
 //Set timer
 var countdown = function() {
