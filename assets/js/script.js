@@ -9,8 +9,11 @@ var questionDiv1 = document.createElement("div");
 var questionDiv2 = document.createElement("div");
 var questionDiv3 = document.createElement("div");
 var questionDiv4 = document.createElement("div");
+var scoreDiv = document.createElement("div");
+
 var result = document.createElement("div");
 body.appendChild(result);
+var players =[];
 
 //Set timer
 var countdown = function() {
@@ -365,10 +368,42 @@ var answer4 = document.createElement("button");
         }
       }
     });
-    answer1.addEventListener("click", );
-    answer2.addEventListener("click", );
-    answer3.addEventListener("click", );
-    answer4.addEventListener("click", );
+    answer1.addEventListener("click", score);
+    answer2.addEventListener("click", score);
+    answer3.addEventListener("click", score);
+    answer4.addEventListener("click", score);
    }
+
+//Get score and enter initials
+var score = function(){
+  questionDiv4.remove();
+  formQuestion.appendChild(scoreDiv);
+  scoreDiv.className = "container";
+  var allDone = document.createElement("h1");
+  scoreDiv.appendChild(allDone);
+  allDone.textContent = "All done!";
+  var getScore = document.createElement("h2");
+  scoreDiv.appendChild(getScore);
+  var finalscore = timeLeft;
+  getScore.textContent = "Your final score is " + finalscore + ".";
+  var getIn = document.createElement("h2");
+  scoreDiv.appendChild(getIn);
+  getIn.textContent = "Enter initials";
+  var Inp = document.createElement("input");
+  scoreDiv.appendChild(Inp);
+  Inp.className = "input";
+  var submit = document.createElement("button");
+  scoreDiv.appendChild(submit);
+  submit.textContent = "Submit";
+  submit.className = "button";
+  submit.addEventListener ("click", function(event){
+    event.preventDefault();
+    players = {
+      initials: Inp.value.trim(),
+      playerscore: finalscore,
+    };
+    localStorage.setItem("players", JSON.stringify(players));
+  });
+}
 
 buttonStart.addEventListener("click", firstQuestion);
