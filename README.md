@@ -9,7 +9,7 @@ A website that contains coding-quiz
 * JavaScript
 
 ## Screenshot
-![Image alt](assets\images\Screenshot_2.jpg)
+![Image alt](https://github.com/NadyaSlb/coding-quiz-nadya/blob/main/assets/images/Screenshot_2.jpg)
 
 ## Website
 https://nadyaslb.github.io/coding-quiz-nadya/
