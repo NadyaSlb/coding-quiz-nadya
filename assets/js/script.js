@@ -81,17 +81,13 @@ var answer4 = document.createElement("button");
           var state = choise.getAttribute("data-state");
 
           if (state === "wrong"){
-
             result.className = "forResult";
             result.textContent = "Wrong!";
           timeLeft -= 10;
 
-
           }else if (state === "correct"){
-
             result.className = "forResult1";
             result.textContent = "Correct!";
-
           }
         }
       });
@@ -103,7 +99,6 @@ var answer4 = document.createElement("button");
 
   // Question 2
   var secondQuestion = function(){
-
    questionDiv.remove();
 formQuestion.appendChild(questionDiv1);
 questionDiv1.className = "container";
@@ -122,7 +117,6 @@ var answer4 = document.createElement("button");
    questionDiv1.appendChild(answer4);
    answer4.className = "buttonZero";
 
-
     questionOl.textContent = "The condition in an if/else statement is enclosed with ___.";
     answer1.textContent = "1. quotes";
       answer1.setAttribute("data-state", "wrong");
@@ -140,7 +134,6 @@ var answer4 = document.createElement("button");
       answer4.className = "button";
       answer4.setAttribute("data-state", "wrong");
     
-
     questionDiv1.addEventListener("click", function(event){
       event.preventDefault();
       var choise = event.target;
@@ -154,13 +147,9 @@ var answer4 = document.createElement("button");
           result.textContent = "Wrong!";
         timeLeft -= 10;
 
-
         }else if (state === "correct"){
-
           result.className = "forResult1";
           result.textContent = "Correct!";
-
-
         }
       }
     });
@@ -190,7 +179,6 @@ var answer4 = document.createElement("button");
    questionDiv2.appendChild(answer4);
    answer4.className = "buttonZero";
 
-
     questionOl.textContent = "Arrays in JavaScript can be used to store ____.";
     answer1.textContent = "1. numbers and strings";
       answer1.setAttribute("data-state", "wrong");
@@ -207,7 +195,6 @@ var answer4 = document.createElement("button");
       answer4.textContent = "4. all of the above";
       answer4.className = "button";
       answer4.setAttribute("data-state", "correct");
-    
 
     questionDiv2.addEventListener("click", function(event){
       event.preventDefault();
@@ -222,13 +209,9 @@ var answer4 = document.createElement("button");
           result.textContent = "Wrong!";
         timeLeft -= 10;
 
-
         }else if (state === "correct"){
-
           result.className = "forResult1";
           result.textContent = "Correct!";
-
-
         }
       }
     });
@@ -258,7 +241,6 @@ var answer4 = document.createElement("button");
    questionDiv3.appendChild(answer4);
    answer4.className = "buttonZero";
 
-
     questionOl.textContent = "String values must be enclosed within ____ when being assigned to variables.";
     answer1.textContent = "1. commas";
       answer1.setAttribute("data-state", "wrong");
@@ -276,7 +258,6 @@ var answer4 = document.createElement("button");
       answer4.className = "button";
       answer4.setAttribute("data-state", "wrong");
     
-
     questionDiv3.addEventListener("click", function(event){
       event.preventDefault();
       var choise = event.target;
@@ -285,18 +266,13 @@ var answer4 = document.createElement("button");
         var state = choise.getAttribute("data-state");
 
         if (state === "wrong"){
-
           result.className = "forResult";
           result.textContent = "Wrong!";
         timeLeft -= 10;
 
-
         }else if (state === "correct"){
-
           result.className = "forResult1";
           result.textContent = "Correct!";
-
-
         }
       }
     });
@@ -327,7 +303,6 @@ var answer4 = document.createElement("button");
    questionDiv4.appendChild(answer4);
    answer4.className = "buttonZero";
 
-
     questionOl.textContent = "A very useful tool used during development and debugging for printing content to the debugger is:";
     answer1.textContent = "1. JavaScript";
       answer1.setAttribute("data-state", "wrong");
@@ -345,7 +320,6 @@ var answer4 = document.createElement("button");
       answer4.className = "button";
       answer4.setAttribute("data-state", "correct");
     
-
     questionDiv4.addEventListener("click", function(event){
       event.preventDefault();
       var choise = event.target;
@@ -354,18 +328,13 @@ var answer4 = document.createElement("button");
         var state = choise.getAttribute("data-state");
 
         if (state === "wrong"){
-
           result.className = "forResult";
           result.textContent = "Wrong!";
         timeLeft -= 10;
 
-
         }else if (state === "correct"){
-
           result.className = "forResult1";
           result.textContent = "Correct!";
-
-
         }
       }
     });
@@ -406,7 +375,6 @@ var score = function(){
     localStorage.setItem("players", JSON.stringify(players));
   });
 
-
   submit.addEventListener ("click", viewScores);
 }
 
@@ -429,8 +397,6 @@ var loadScores = function(){
   for (var i = 0; i < savedScores.length; i++) {
     loadScores(savedScores[i]);
   }
- 
 }
-
 
 buttonStart.addEventListener("click", firstQuestion);
